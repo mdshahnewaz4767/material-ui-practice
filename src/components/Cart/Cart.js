@@ -1,6 +1,7 @@
 import { Button, ButtonGroup, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio} from '@material-ui/core';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
+import CheckBox from '@material-ui/icons/CheckBox';
 import React from 'react';
 import "./Cart.css";
 
@@ -17,10 +18,9 @@ const Cart = () => {
             <br/>
             <Button endIcon={<SaveIcon />} size="medium" variant="contained" color="secondary" style={{marginBottom: '2rem'}}>Secondary</Button>
             <br/>
-            
-            <ButtonGroup>
-                <Button startIcon={<SaveIcon />} size="medium" variant="contained" color="primary" style={{marginBottom: '2rem'}}>Save</Button>
-                <Button startIcon={<DeleteIcon />} size="medium" variant="contained" color="secondary" style={{marginBottom: '2rem'}}>Discard</Button>
+            <ButtonGroup  style={{marginBottom: '2rem'}}>
+                <Button startIcon={<SaveIcon />} size="medium" variant="contained" color="primary">Save</Button>
+                <Button startIcon={<DeleteIcon />} size="medium" variant="contained" color="secondary">Discard</Button>
             </ButtonGroup>
             <br/>
             <FormControl component="fieldset">
