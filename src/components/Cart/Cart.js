@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography} from '@material-ui/core';
+import { Button, ButtonGroup, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, Grid, Paper} from '@material-ui/core';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
@@ -15,7 +15,7 @@ const Cart = () => {
     const theme = createMuiTheme({
         typography: {
             h2: {
-                fontSize: 18,
+                fontSize: 40,
             }
         },
         palette: {
@@ -45,6 +45,19 @@ const Cart = () => {
             <br/>
             <br/>
             <Button endIcon={<SaveIcon />} size="medium" variant="contained" color="default" style={{marginBottom: '2rem'}}>Secondary</Button>
+            <br/>
+            <Grid  container spacing={2} justify="center">
+                <Grid item lg={12}>
+                    <Paper style={{height: 75, width: '100%'}} />
+                </Grid>
+                <Grid item lg={3}>
+                    <Paper style={{height: 75, width: '100%'}} />
+                </Grid>
+                <Grid item lg={3}>
+                    <Paper style={{height: 75, width: '100%'}} />
+                </Grid>
+                
+            </Grid>
             <br/>
             <ThemeProvider theme={theme}>
                 <ButtonGroup  style={{marginBottom: '2rem'}}>
