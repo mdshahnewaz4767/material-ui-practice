@@ -1,7 +1,8 @@
-import { Button, ButtonGroup, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, Grid, Paper} from '@material-ui/core';
+import { Button, ButtonGroup, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography, Grid, Paper, AppBar, Toolbar, IconButton} from '@material-ui/core';
 import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
 import React from 'react';
 import "./Cart.css";
 import { blue, green } from '@material-ui/core/colors';
@@ -30,6 +31,19 @@ const Cart = () => {
     return (
 
         <div>
+            <AppBar color="secondary">
+                <Toolbar>
+                    <IconButton>
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography variant="h6">
+                        MUI Theming
+                    </Typography>
+                    <Button>
+                        Login
+                    </Button>
+                </Toolbar>
+            </AppBar>
             <ThemeProvider theme={theme}>
                 <Typography variant="h2">
                     Welcome to MUI
@@ -47,13 +61,13 @@ const Cart = () => {
             <Button endIcon={<SaveIcon />} size="medium" variant="contained" color="default" style={{marginBottom: '2rem'}}>Secondary</Button>
             <br/>
             <Grid  container spacing={2} justify="center">
-                <Grid item lg={12}>
+                <Grid item xs={3} lg={12}>
                     <Paper style={{height: 75, width: '100%'}} />
                 </Grid>
-                <Grid item lg={3}>
+                <Grid item xs={3} lg={3}>
                     <Paper style={{height: 75, width: '100%'}} />
                 </Grid>
-                <Grid item lg={3}>
+                <Grid item xs={3} lg={3}>
                     <Paper style={{height: 75, width: '100%'}} />
                 </Grid>
                 
